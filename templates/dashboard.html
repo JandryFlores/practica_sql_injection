@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<div class="bienvenida">
+
+    <h2>Panel de usuario</h2>
+
+    <h3>Bienvenido: {{ usuario }}</h3>
+
+    <p>Rol: {{ rol }}</p>
+
+    <p>Tipo de autenticación: {{ modo }}</p>
+
+    <div class="alert success">
+        Inicio de sesión realizado correctamente.
+    </div>
+
+    <a href="/" class="boton">
+        Regresar al inicio
+    </a>
+
+</div>
+
+{% endblock %}

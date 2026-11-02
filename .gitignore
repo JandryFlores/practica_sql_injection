@@ -1,0 +1,16 @@
+# Archivos temporales de Python
+__pycache__/
+*.py[cod]
+
+# Entornos virtuales
+venv/
+.venv/
+
+# Variables de entorno
+.env
+
+# Base de datos local
+database/*.db
+
+# Archivos temporales
+*.log

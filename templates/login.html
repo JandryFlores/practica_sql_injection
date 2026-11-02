@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<div class="formulario">
+
+    {% if modo == "vulnerable" %}
+
+        <h2>Login vulnerable</h2>
+
+        <div class="alert danger">
+            Modo de laboratorio: consulta SQL vulnerable.
+        </div>
+
+    {% else %}
+
+        <h2>Login protegido</h2>
+
+        <div class="alert success">
+            Modo seguro: consulta parametrizada.
+        </div>
+
+    {% endif %}
+
+    <form method="POST">
+
+        <label>Usuario</label>
+
+        <input
+            type="text"
+            name="usuario"
+            placeholder="Ingrese su usuario"
+            maxlength="100"
+            required
+        >
+
+        <label>Contraseña</label>
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Ingrese su contraseña"
+            maxlength="100"
+            required
+        >
+
+        <button type="submit">
+            Iniciar sesión
+        </button>
+
+    </form>
+
+    <p>
+        Usuarios de prueba:
+    </p>
+
+    <p>admin / admin123</p>
+    <p>estudiante / estudiante123</p>
+    <p>invitado / invitado123</p>
+
+    <a href="/">Volver al inicio</a>
+
+</div>
+
+{% endblock %}

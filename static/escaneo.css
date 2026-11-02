@@ -1,0 +1,159 @@
+
+.escaneo-contenedor {
+    padding: 25px;
+    color: #1e293b;
+}
+
+.escaneo-encabezado {
+    background: linear-gradient(135deg, #0f172a, #1e40af);
+    color: white;
+    padding: 30px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+}
+
+.escaneo-encabezado h1 {
+    margin-bottom: 10px;
+    font-size: 27px;
+}
+
+.escaneo-encabezado p {
+    color: #dbeafe;
+}
+
+.escaneo-panel {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px #0000000d;
+}
+
+.escaneo-panel h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.escaneo-info {
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+.escaneo-info strong {
+    color: #2563eb;
+}
+
+.btn-escanear {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 13px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-escanear:hover {
+    background: #1d4ed8;
+}
+
+.estadisticas-escaneo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.tarjeta-escaneo {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #0000000d;
+    border-left: 5px solid #2563eb;
+}
+
+.tarjeta-escaneo.abiertos {
+    border-left-color: #16a34a;
+}
+
+.tarjeta-escaneo.cerrados {
+    border-left-color: #dc2626;
+}
+
+.tarjeta-escaneo p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.tarjeta-escaneo h2 {
+    font-size: 30px;
+    margin-top: 8px;
+}
+
+.tabla-escaneo {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-escaneo th,
+.tabla-escaneo td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tabla-escaneo th {
+    background: #eff6ff;
+    color: #1e40af;
+}
+
+.tabla-escaneo tr:hover {
+    background: #f8fafc;
+}
+
+.estado-escaneo {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.estado-abierto {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.estado-cerrado {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.nota-escaneo {
+    margin-top: 20px;
+    padding: 14px;
+    background: #eff6ff;
+    color: #1e40af;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.mensaje-escaneo {
+    color: #64748b;
+    padding: 15px 0;
+}
+
+@media (max-width: 650px) {
+    .estadisticas-escaneo {
+        grid-template-columns: 1fr;
+    }
+
+    .tabla-panel-escaneo {
+        overflow-x: auto;
+    }
+
+    .tabla-escaneo {
+        min-width: 450px;
+    }
+}

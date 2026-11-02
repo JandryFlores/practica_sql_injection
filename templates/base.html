@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema de Ciberseguridad</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1> SEGURIDAD INFORMÁTICA </h1>
+
+        <p>Práctica de laboratorio de SQL Injection y Seguridad Informática</p>
+
+    </header>
+
+    <nav>
+
+        <a href="/">Inicio</a>
+
+        <a href="/login-vulnerable">Login vulnerable</a>
+
+        <a href="/login-seguro">Login seguro</a>
+
+        <a href="/seguridad">Seguridad BD</a>
+
+        <a href="/escaneo">Escaneo de red</a>
+
+        <a href="/logout">Cerrar sesión</a>
+
+    </nav>
+
+    <main>
+
+        {% with mensajes = get_flashed_messages(with_categories=true) %}
+
+            {% for categoria, mensaje in mensajes %}
+
+                <div class="alert {{ categoria }}">
+                    {{ mensaje }}
+                </div>
+
+            {% endfor %}
+
+        {% endwith %}
+
+        {% block contenido %}
+
+        {% endblock %}
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>

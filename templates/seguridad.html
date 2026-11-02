@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<h2>Seguridad de bases de datos</h2>
+
+<div class="contenedor">
+
+    <div class="tarjeta">
+
+        <h3>1. Consultas parametrizadas</h3>
+
+        <p>
+            Utilizar parámetros SQL en lugar de concatenar
+            directamente los datos proporcionados por los usuarios.
+        </p>
+
+    </div>
+
+    <div class="tarjeta">
+
+        <h3>2. Contraseñas seguras</h3>
+
+        <p>
+            Almacenar contraseñas utilizando funciones de hash
+            diseñadas para contraseñas, como PBKDF2 o Argon2.
+        </p>
+
+    </div>
+
+    <div class="tarjeta">
+
+        <h3>3. Control de acceso</h3>
+
+        <p>
+            Limitar los permisos de los usuarios y aplicaciones
+            que acceden a la base de datos.
+        </p>
+
+    </div>
+
+    <div class="tarjeta">
+
+        <h3>4. Copias de seguridad</h3>
+
+        <p>
+            Realizar respaldos periódicos y comprobar que
+            puedan restaurarse correctamente.
+        </p>
+
+    </div>
+
+    <div class="tarjeta">
+
+        <h3>5. Protección de archivos</h3>
+
+        <p>
+            Restringir el acceso al archivo de base de datos
+            y proteger las credenciales de conexión.
+        </p>
+
+    </div>
+
+    <div class="tarjeta">
+
+        <h3>6. Registro de actividad</h3>
+
+        <p>
+            Registrar errores y eventos de seguridad sin
+            almacenar contraseñas ni información sensible.
+        </p>
+
+    </div>
+
+</div>
+
+{% endblock %}

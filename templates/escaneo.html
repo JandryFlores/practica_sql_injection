@@ -1,0 +1,103 @@
+
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='escaneo.css') }}">
+
+<div class="escaneo-contenedor">
+
+    <div class="escaneo-panel">
+        <h2>Configuración del análisis</h2>
+
+        <p class="escaneo-info">
+            Equipo analizado:
+            <strong>127.0.0.1 (equipo local)</strong>
+        </p>
+
+        <p class="escaneo-info">
+            Se comprobarán los puertos configurados para este laboratorio.
+        </p>
+
+        <form method="POST" action="{{ url_for('escaneo') }}">
+            <button type="submit" class="btn-escanear">
+                Iniciar escaneo
+            </button>
+        </form>
+    </div>
+
+    {% if resultados %}
+
+        {% set abiertos = resultados | selectattr("estado", "equalto", "Abierto") | list %}
+        {% set cerrados = resultados | selectattr("estado", "equalto", "Cerrado") | list %}
+
+        <div class="estadisticas-escaneo">
+
+            <div class="tarjeta-escaneo">
+                <p>Puertos analizados</p>
+                <h2>{{ resultados|length }}</h2>
+            </div>
+
+            <div class="tarjeta-escaneo abiertos">
+                <p>Puertos abiertos</p>
+                <h2>{{ abiertos|length }}</h2>
+            </div>
+
+            <div class="tarjeta-escaneo cerrados">
+                <p>Puertos cerrados</p>
+                <h2>{{ cerrados|length }}</h2>
+            </div>
+
+        </div>
+
+        <div class="escaneo-panel tabla-panel-escaneo">
+
+            <h2>Resultados del escaneo</h2>
+
+            <table class="tabla-escaneo">
+                <thead>
+                    <tr>
+                        <th>Puerto</th>
+                        <th>Servicio</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for resultado in resultados %}
+                    <tr>
+                        <td>{{ resultado.puerto }}</td>
+                        <td>{{ resultado.servicio }}</td>
+                        <td>
+                            {% if resultado.estado == "Abierto" %}
+                                <span class="estado-escaneo estado-abierto">
+                                    Abierto
+                                </span>
+                            {% else %}
+                                <span class="estado-escaneo estado-cerrado">
+                                    Cerrado
+                                </span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    {% else %}
+
+        <div class="escaneo-panel">
+            <h2>Resultados del escaneo</h2>
+            <p class="mensaje-escaneo">
+                Todavía no se ha ejecutado ningún análisis.
+                Presiona el botón "Iniciar escaneo" para comenzar.
+            </p>
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

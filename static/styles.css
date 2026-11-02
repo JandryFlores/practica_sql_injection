@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #263445;
+}
+
+header {
+    background: #102a43;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+nav {
+    background: #1d4e89;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #90cdf4;
+}
+
+main {
+    max-width: 1150px;
+    min-height: 500px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.bienvenida {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+.bienvenida h2 {
+    color: #1d4e89;
+    margin-bottom: 15px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border-top: 5px solid #2b6cb0;
+}
+
+.tarjeta h3 {
+    color: #1d4e89;
+    margin-bottom: 15px;
+}
+
+.tarjeta p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.boton {
+    display: inline-block;
+    background: #1d4e89;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.boton:hover {
+    background: #2b6cb0;
+}
+
+.formulario {
+    max-width: 450px;
+    background: white;
+    padding: 30px;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.formulario h2 {
+    text-align: center;
+    color: #1d4e89;
+    margin-bottom: 20px;
+}
+
+.formulario label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+}
+
+.formulario button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    background: #1d4e89;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background: #2b6cb0;
+}
+
+.alert {
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 6px;
+}
+
+.danger {
+    background: #fed7d7;
+    color: #9b2c2c;
+}
+
+.success {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+footer {
+    background: #102a43;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+code {
+    display: inline-block;
+    background: #e2e8f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+@media (max-width: 650px) {
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+}

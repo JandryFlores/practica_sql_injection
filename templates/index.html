@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+
+<section class="bienvenida">
+
+    <h2>Práctica Nº04: Seguridad Informática</h2>
+
+</section>
+
+<div class="contenedor">
+
+    <div class="tarjeta">
+
+        <h3>SQL Injection</h3>
+
+        <p>
+            Simulación de una aplicación con consultas SQL inseguras.
+        </p>
+
+        <a href="/login-vulnerable" class="boton">
+            Ingresar
+        </a>
+
+    </div>
+
+    <div class="tarjeta">
+
+        <h3>Protección SQL</h3>
+
+        <p>
+            Implementación de consultas parametrizadas y contraseñas protegidas.
+        </p>
+
+        <a href="/login-seguro" class="boton">
+            Ingresar
+        </a>
+
+    </div>
+
+    <div class="tarjeta">
+
+        <h3>Seguridad de bases de datos</h3>
+
+        <p>
+            Buenas prácticas de seguridad y endurecimiento.
+        </p>
+
+        <a href="/seguridad" class="boton">
+            Consultar
+        </a>
+
+    </div>
+
+    <div class="tarjeta">
+
+        <h3>Escaneo de red</h3>
+
+        <p>
+            Comprobación básica de puertos en el equipo local.
+        </p>
+
+        <a href="/escaneo" class="boton">
+            Consultar
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}
